@@ -3,21 +3,24 @@ using namespace std;
 
 int main() {
 
-    float A;
-    cin >> A;
-    
-    if(A<0.00000){
-        cout << "Fora de intervalo" << endl;
-    }else if(A>0.00000 && A<=25){
-        cout << "Intervalo [0,25]" << endl;
-    }else if(A>25.00000 && A<=50){
-        cout << "Intervalo (25,50]" << endl;
-    }else if(A>50.00000 && A<=75){
-        cout << "Intervalo (50,75]" << endl;
-    }else if(A>=75.00000 && A<=100){
-        cout << "Intervalo (75,100]" << endl;
-    }else if(A > 100.0000) {
-        cout << "Fora de intervalo\n";
-    }
+    int N;
+    scanf("%d", &N);
+
+    int temp;
+
+    printf("%d note(s) of 500\n", N/500);
+    temp = N%500;
+
+    printf("%d note(s) of 100\n", temp/100);
+    temp = temp%100;
+
+    printf("%d note(s) of 50\n", temp/50);
+    temp = temp%50;
+
+    printf("%d note(s) of 20\n", temp/20);
+    temp = temp%20;
+
+    printf("%d note(s) of 10\n", temp/10);
+
     return 0;
 }
