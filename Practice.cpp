@@ -2,25 +2,17 @@
 using namespace std;
 
 int main() {
-
-    int N;
-    scanf("%d", &N);
-
-    int temp;
-
-    printf("%d note(s) of 500\n", N/500);
-    temp = N%500;
-
-    printf("%d note(s) of 100\n", temp/100);
-    temp = temp%100;
-
-    printf("%d note(s) of 50\n", temp/50);
-    temp = temp%50;
-
-    printf("%d note(s) of 20\n", temp/20);
-    temp = temp%20;
-
-    printf("%d note(s) of 10\n", temp/10);
+    int t;
+    cin >> t;
+    if(t<=1399){
+        cout << "Division 4" << endl;
+    } else if(t>1399 && t<=1599) {
+        cout << "Division 3" << endl;
+    }else if(t>=1600 && t<=1899){
+        cout << "Division 2" << endl;
+    } else if(t>=1900) {
+        cout << "Division 1" << endl;
+    }
 
     return 0;
 }
