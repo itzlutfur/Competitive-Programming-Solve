@@ -1,23 +1,22 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
-int main()
-{
-    int max, min, X, Y;
-    int sum = 0;
+int main(){
+    int m, n, h, l, sum;
 
-    cin >> X >> Y;
+    while(true){
+        cin >> m >> n;
+        if(m<=0 || n<=0) break;
 
-    max = X>Y ? X : Y;
-    min = max==X ? Y: X;
-
-    for(int i = min+1; i < max; i++){
-        if(i%2!=0){
+        h = m>n ? m:n;
+        l = h==m ? n:m;
+        sum = 0;
+        for(int i = l; i<=h; i++){
+            cout << i << " ";
             sum += i;
         }
+        cout << "Sum=" << sum << endl;
     }
-
-    cout << sum << endl; 
 
     return 0;
 }
